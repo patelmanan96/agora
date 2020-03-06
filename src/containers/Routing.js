@@ -8,11 +8,11 @@ import SearchPage from "./SearchPage";
 function Routing() {
     return (
         <div className="App">
-            <AgoraNavbar/>
             <Router>
+                <AgoraNavbar/>
                 <div>
-                    <Route path='/' exact component={Placeholder}/>
-                    <Route path="/search/:query" exact component={SearchPage}/>
+                    <Route path='/' exact component={SearchPage}/>
+                    <Route path="/search/:query" exact render={SearchPage}/>
                 </div>
             </Router>
         </div>

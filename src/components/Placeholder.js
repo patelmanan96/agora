@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from '../logo.svg';
 import './App.css';
+import AgoraNavbar from "./AgoraNavbar";
 
 class Placeholder extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
+
     render() {
-        return(
+        return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
@@ -16,7 +18,9 @@ class Placeholder extends React.Component {
                     </p>
                 </header>
             </div>
+
         )
     }
 }
+
 export default Placeholder;
