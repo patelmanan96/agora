@@ -24,7 +24,7 @@ class AgoraNavbar extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark">
-                <a className="navbar-brand" href="#"><h1>Agora</h1></a>
+                <a className="navbar-brand" href="/home"><h1>Agora</h1></a>
                 <form className="form-inline form-group row ml-4 mr-3">
                     <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="submit">Create Event</button>
                     <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="submit">Upcoming</button>
