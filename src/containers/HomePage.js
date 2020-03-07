@@ -1,14 +1,20 @@
 import React, {Component} from 'react';
+import CalendarEvents from '../components/CalendarEvents';
+import RecommendEvents from '../components/RecommendEvents';
 
 
 class Homepage extends Component {
     render () {
         return (
             
-                <div className="container">
+                <div className="container" style = {{marginTop: 70}}>
                     <div className="row">
-                        <div className="col-lg-6">Calendar Events</div>
-                        <div className="col-lg-6">Recommendation Events</div>
+                        <div className="col-sm-6">
+                            <CalendarEvents />
+                        </div>
+                        <div className="col-sm-6"> 
+                            <RecommendEvents />
+                        </div>
                     </div>
                 </div>
            
