@@ -11,11 +11,15 @@ function Routing() {
     return (
         <div className="App">
             <Router>
-                <AgoraNavbar/>
                 <div>
-                    <Route path='/' exact component={SearchPage}/>
-                    <Route path="/search/:query" exact render={SearchPage}/>
-                    <Route path="/home" exact component={Homepage} />
+                    <Route path='/' exact
+                           component = {AgoraNavbar}/>
+                    <Route path='/search/:query' exact
+                           component = {AgoraNavbar}/>
+                    <Route path='/' exact
+                           component = {Homepage}/>
+                    <Route path="/search/:query" exact
+                           component = {SearchPage}/>
                 </div>
             </Router>
         </div>
