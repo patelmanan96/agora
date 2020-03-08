@@ -28,12 +28,11 @@ class SearchService {
     }
 
     getCards = (query) => {
-        // var result = [];
-        // this.cards.filter((card) => (card.title.includes(query) || card.tag.includes(query)
-        //     || card.description.includes(query))).forEach((card) => {result = [...card]});
-        // return result;
-        return this.cards;
-    }
+        if(query === "*") return this.cards;
+        query = query.toLowerCase();
+        return this.cards.filter((card) => (card.title.toLowerCase().includes(query) ||
+            card.tag.toLowerCase().includes(query) || card.description.toLowerCase().includes(query)));
+    };
 }
 
 export default SearchService;

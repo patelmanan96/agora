@@ -26,7 +26,7 @@ class SearchPage extends React.Component {
                 <div className="row m-3 bg-light text-dark">
                     <div className="col-sm ">
                         <div className="mt-4">
-                            <h3> Search Results for '{this.state.query}' </h3>
+                            <h3> Search Results for '{this.state.query === '*' ? 'all' : this.state.query}' </h3>
                         </div>
                     </div>
                     <div className="col-sm">

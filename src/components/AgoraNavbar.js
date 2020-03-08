@@ -7,7 +7,7 @@ class AgoraNavbar extends React.Component {
         super(props);
 
         this.state = {
-            query: ''
+            query: '*'
         }
     }
 
