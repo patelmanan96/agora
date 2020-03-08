@@ -9,10 +9,15 @@ function Routing() {
     return (
         <div className="App">
             <Router>
-                <AgoraNavbar/>
                 <div>
-                    <Route path='/' exact component={SearchPage}/>
-                    <Route path="/search/:query" exact render={SearchPage}/>
+                    <Route path='/' exact
+                           component = {AgoraNavbar}/>
+                    <Route path='/search/:query' exact
+                           component = {AgoraNavbar}/>
+                    <Route path='/' exact
+                           component = {Placeholder}/>
+                    <Route path="/search/:query" exact
+                           component = {SearchPage}/>
                 </div>
             </Router>
         </div>
