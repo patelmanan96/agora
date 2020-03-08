@@ -11,9 +11,9 @@ class SearchCard extends React.Component {
                     {this.props.cardProps.tag}
                 </div>
                 <div className="card-body">
-                    <img src={this.props.cardProps.img} className="card-img-top img-fluid" alt="..."/>
+                    <img src={this.props.cardProps.image} className="card-img-top img-fluid" alt="..."/>
                     <h5 className="card-title">{this.props.cardProps.title}</h5>
-                    <p className="card-text">{this.props.cardProps.description}</p>
+                    <p className="card-text">{this.props.cardProps.summary}</p>
                     <a href="#" className="btn btn-primary">More..</a>
                 </div>
             </div>
