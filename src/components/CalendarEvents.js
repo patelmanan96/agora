@@ -9,7 +9,7 @@ import "@fullcalendar/daygrid/main.css";
         
         render() {
             return (
-                <div>
+                <div style={{marginRight: 20}}>
                     <h3 style={{textAlign:"left", marginBottom: 20}}><i>Upcoming Events</i></h3>
                     <FullCalendar
                         defaultView="dayGridMonth"
