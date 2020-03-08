@@ -7,7 +7,7 @@ class Homepage extends Component {
     render () {
         return (
             
-                <div className="container" style = {{marginTop: 70}}>
+                <div className="container" style={{marginTop: 70}}>
                     <div className="row">
                         <div className="col-sm-6">
                             <CalendarEvents />
