@@ -8,13 +8,13 @@ class SearchCard extends React.Component {
         return (
             <div className="card">
                 <div className="card-header">
-                    Featured
+                    {this.props.cardProps.tag}
                 </div>
                 <div className="card-body">
-                    <img src="..." className="card-img-top" alt="..."/>
-                    <h5 className="card-title">Special title treatment</h5>
-                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <img src={this.props.cardProps.img} className="card-img-top img-fluid" alt="..."/>
+                    <h5 className="card-title">{this.props.cardProps.title}</h5>
+                    <p className="card-text">{this.props.cardProps.description}</p>
+                    <a href="#" className="btn btn-primary">More..</a>
                 </div>
             </div>
         )
