@@ -29,9 +29,9 @@ class AgoraNavbar extends React.Component {
                     <a className="navbar-brand" href="#"><h1>Agora</h1></a>
                 </Link>
                 <form className="form-inline form-group row ml-4 mr-3">
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="submit">Create Event</button>
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="submit">Upcoming</button>
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="submit">Hosting</button>
+                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Create Event</button>
+                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Upcoming</button>
+                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Hosting</button>
                     <input onChange={this.searchParamChange} className="form-control mr-sm-4" type="search"
                            placeholder="Search Event"
                            aria-label="Search"/>
