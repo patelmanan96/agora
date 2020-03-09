@@ -31,6 +31,10 @@ class Homepage extends Component {
         this.setState({eventDetail: true});
     }
 
+    eventDetailCancleHandler = () => {
+        this.setState({eventDetail: false})
+    }
+
     render () {
         return (
             <Aux>
@@ -43,7 +47,7 @@ class Homepage extends Component {
                             <RecommendEvents />
                         </div>
                     </div>
-                    <Modal show={this.state.eventDetail}>
+                    <Modal show={this.state.eventDetail} modalClosed={this.eventDetailCancleHandler}>
                         <EventSummary eventInfo={this.state.eventInfo}/>
                     </Modal>
                 </div>
