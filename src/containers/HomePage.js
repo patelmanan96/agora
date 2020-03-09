@@ -44,7 +44,7 @@ class Homepage extends Component {
                             <CalendarEvents eventExamed={this.eventDetailHandler}/>
                         </div>
                         <div className="col-sm-5"> 
-                            <RecommendEvents />
+                            <RecommendEvents eventDetail={this.eventDetailHandler}/>
                         </div>
                     </div>
                     <Modal show={this.state.eventDetail} modalClosed={this.eventDetailCancleHandler}>

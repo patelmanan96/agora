@@ -2,13 +2,13 @@ import EventCard from "../models/EventCard";
 
 class SearchService {
     static instance = null;
-    cards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane', 'Avionics'
-        , 'Flying Plane', 'Detailed Desc.', []),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/baboon.png', 'Baboon', 'Animal', 'Wild Animal'
+    cards = [new EventCard('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80', 'TGIT', '3/19/2020 5:00pm'
+        , 'Khoury College of Computer Science', 'Detailed Desc.', []),
+        new EventCard('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80', 'Career Fair', '3/24/3030 10:00am', 'Curry Student Center'
             , 'Detailed Desc.', ['dangerous']),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'City', 'Place', 'Quiet City'
+        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'Net Working For Art and Design Students', '3/31/2020 1:00pm', 'Ryder Hall'
             , 'Detailed Desc.', []),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Pool', 'Game', 'Game of Pool'
+        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Students Pool Tournaments', '4/15/2020 7:00pm', 'Curry Student Center'
             , 'Detailed Desc.', [])];
 
     static getInstance() {
