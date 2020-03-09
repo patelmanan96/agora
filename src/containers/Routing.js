@@ -5,6 +5,7 @@ import Placeholder from "../components/Placeholder";
 import AgoraNavbar from "../components/AgoraNavbar";
 import SearchPage from "./SearchPage";
 import CreateEvent from "./CreateEvent";
+import SignUp from "./SignUp";
 
 function Routing() {
     return (
