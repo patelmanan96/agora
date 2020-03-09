@@ -2,7 +2,7 @@ import EventCard from "../models/EventCard";
 
 class SearchService {
     static instance = null;
-    cards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane', 'Avionics'
+    #eventCards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane', 'Avionics'
         , 'Flying Plane', 'Detailed Desc.', []),
         new EventCard('https://homepages.cae.wisc.edu/~ece533/images/baboon.png', 'Baboon', 'Animal', 'Wild Animal'
             , 'Detailed Desc.', ['dangerous']),
@@ -11,14 +11,16 @@ class SearchService {
         new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Pool', 'Game', 'Game of Pool'
             , 'Detailed Desc.', [])];
 
+    #hostingCards = [];
+
     static getInstance() {
         return this.instance == null ? new SearchService() : this.instance;
     }
 
     getCards = (query) => {
-        if (query === "*") return this.cards;
+        if (query === "*") return this.#eventCards;
         query = query.toLowerCase();
-        return this.cards.filter((card) => this.#queryMatchCards(card, query));
+        return this.#eventCards.filter((card) => this.#queryMatchCards(card, query));
     };
 
     #queryMatchCards = (card, query) => {
@@ -28,11 +30,11 @@ class SearchService {
             (card.othertags.filter(tag => tag.includes(query)).length > 0))
     };
 
-    getRecommendedCards = () => this.cards;
+    getRecommendedCards = () => this.#eventCards;
 
     addNewCard = (card) => {
         let newCard = new EventCard(card.image, card.title, card.tag, card.summary, card.description, card.othertags);
-        this.cards = [...newCard]
+        this.#eventCards = [...newCard]
     };
 }
 

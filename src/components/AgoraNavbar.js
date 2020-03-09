@@ -18,8 +18,13 @@ class AgoraNavbar extends React.Component {
     };
 
     fireSearch = () => {
-        if(this.state.query !== '')
-            this.props.history.push('/search/'+this.state.query)
+        if (this.state.query !== '')
+            this.props.history.push('/search/' + this.state.query)
+    };
+
+    fireCreateEvent = () => {
+        console.log("create event")
+        this.props.history.push('/createEvent');
     };
 
     render() {
@@ -29,7 +34,9 @@ class AgoraNavbar extends React.Component {
                     <a className="navbar-brand" href="#"><h1>Agora</h1></a>
                 </Link>
                 <form className="form-inline form-group row ml-4 mr-3">
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Create Event</button>
+                    <button onClick={this.fireCreateEvent} className="btn btn-outline-info mr-sm-4 my-2 my-sm-0"
+                            type="button">Create Event
+                    </button>
                     <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Upcoming</button>
                     <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Hosting</button>
                     <input onChange={this.searchParamChange} className="form-control mr-sm-4" type="search"
