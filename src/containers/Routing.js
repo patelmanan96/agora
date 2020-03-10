@@ -5,6 +5,7 @@ import Placeholder from "../components/Placeholder";
 import AgoraNavbar from "../components/AgoraNavbar";
 import SearchPage from "./SearchPage";
 import Homepage from './HomePage';
+import HostingPage from './HostingPage';
 
 
 function Routing() {
@@ -20,6 +21,10 @@ function Routing() {
                            component = {Homepage}/>
                     <Route path="/search/:query" exact
                            component = {SearchPage}/>
+                    <Route path="/hosting" exact 
+                           component= {AgoraNavbar} />
+                    <Route path="/hosting" exact 
+                           component= {HostingPage} />
                 </div>
             </Router>
         </div>
