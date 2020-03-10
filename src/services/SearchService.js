@@ -30,6 +30,8 @@ class SearchService {
             (card.othertags.filter(tag => tag.includes(query)).length > 0))
     };
 
+    getHostingCards = () => this.#hostingCards
+
     getRecommendedCards = () => this.#eventCards;
 
     addNewCard = (card) => {
