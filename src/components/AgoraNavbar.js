@@ -22,8 +22,12 @@ class AgoraNavbar extends React.Component {
             this.props.history.push('/search/' + this.state.query)
     };
 
+    fireUpcoming = () => {
+        this.props.history.push('/upcoming')
+    };
+
     fireCreateEvent = () => {
-        console.log("create event")
+        console.log("create event");
         this.props.history.push('/createEvent');
     };
 
@@ -37,7 +41,7 @@ class AgoraNavbar extends React.Component {
                     <button onClick={this.fireCreateEvent} className="btn btn-outline-info mr-sm-4 my-2 my-sm-0"
                             type="button">Create Event
                     </button>
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Upcoming</button>
+                    <button onClick={this.fireUpcoming} className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Upcoming</button>
                     <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Hosting</button>
                     <input onChange={this.searchParamChange} className="form-control mr-sm-4" type="search"
                            placeholder="Search Event"

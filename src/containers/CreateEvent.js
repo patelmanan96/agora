@@ -5,70 +5,30 @@ class CreateEvent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            emptyField: false,
-            failedPassword: false,
-            usernameRepeated: false,
-            username: '',
-            password: '',
-            verifyPassword: ''
+            status: false
         }
     }
 
-    usernameModified = (event) => {
-        this.setState(
-            {
-                username: event.target.value
-            }
-        )
-    }
-
-    passwordModified = (event) => {
-        this.setState(
-            {
-                password: event.target.value
-            }
-        )
-    }
-    verifyPasswordModified = (event) => {
-        this.setState(
-            {
-                verifyPassword: event.target.value
-            }
-        )
-    }
-
-    checkAndSignUp = () => {
-
-    }
-
-    signUp = () => {
-        this.props.history.push("/signUp");
+    create = () => {
+        this.setState({
+            status: true
+        })
     }
 
     render() {
         return (
             <div className="container-fluid mt-5">
-                <div className="container-md">
+                <div className="container-md mb-5">
                     <h1> Create Event </h1>
-                    {/*<div className="container">*/}
-                    {/*    <h1>Sign Up</h1>*/}
-                    {/*    {*/}
-                    {/*        this.state.failedPassword === true && <div className="alert alert-danger" role="alert">*/}
-                    {/*            Passwords Don't Match*/}
-                    {/*        </div>*/}
-                    {/*    }*/}
-                    {/*    {*/}
-                    {/*        this.state.emptyField === true && <div className="alert alert-danger" role="alert">*/}
-                    {/*            Enter Both Username And Password. Cannot Sign Up Empty.*/}
-                    {/*        </div>*/}
-                    {/*    }*/}
-                    {/*    {*/}
-                    {/*        this.state.usernameRepeated === true && <div className="alert alert-danger" role="alert">*/}
-                    {/*            Username Not Available*/}
-                    {/*        </div>*/}
-                    {/*    }*/}
-                    {/*</div>*/}
-
+                    {this.state.status ? <div>
+                        <div className="alert alert-success" role="alert">
+                            <h4 className="alert-heading">This Feature is Coming Soon...</h4>
+                            <p>You successfully completed the steps to create an event.
+                                Unfortunately this feature is still under development</p>
+                            <br/>
+                            <p className="mb-0">Thank you for using this page.</p>
+                        </div>
+                    </div> : <div></div>}
                     <div className="form">
 
                         <div className="form-row">
@@ -103,19 +63,34 @@ class CreateEvent extends React.Component {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="inputAddress2">Address 2</label>
-                            <input type="text" className="form-control" id="inputAddress2"
+                            <label htmlFor="inputAddress2">Upload Photo</label>
+                            <input type="file" className="form-control" id="inputAddress2"
                                    placeholder="Apartment, studio, or floor"/>
                         </div>
                         <div className="form-group">
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                                <label className="form-check-label" htmlFor="gridCheck">
-                                    Check me out
-                                </label>
+                            <label htmlFor="inputAddress2">TAGS</label>
+                            <div className="container form-check">
+
+                                <column col-sm="3"><input type="checkbox"/><label>CAMD</label></column>
+                                <column col-sm="3"><input type="checkbox"/><label>School of Business</label></column>
+                                <column col-sm="3"><input type="checkbox"/><label>Khoury</label></column>
+
+
+                                <column col-sm="true"><input type="checkbox"/><label>College of Engineering</label>
+                                </column>
+                                <column col-sm="true"><input type="checkbox"/><label>Health Sciences</label></column>
+                                <column col-sm="true"><input type="checkbox"/><label>Law</label></column>
+
+
+                                <column col-sm="true"><input type="checkbox"/><label>CPS</label></column>
+                                <column col-sm="true"><input type="checkbox"/><label>College of Science</label></column>
+                                <column col-sm="true"><input type="checkbox"/><label>Social Sciences and
+                                    Humanities</label></column>
+
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-primary">Sign in</button>
+
+                        <button onClick={this.create} type="submit" className="btn btn-primary">Create</button>
                     </div>
                 </div>
             </div>
