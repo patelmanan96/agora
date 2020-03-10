@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../hoc/Aux';
 import FilterBar from '../components/FilterBar';
 import HostingEvents from '../components/HostingEvents';
-import SearchService from '../services/SearchService';
+
 
 
 class HostingPage extends Component {
