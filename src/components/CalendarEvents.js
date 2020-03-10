@@ -23,7 +23,8 @@ import "@fullcalendar/daygrid/main.css";
                         events={[
                             { title: 'Career Fair', date: '2020-03-24' },
                             { title: 'NetWorking', date: '2020-03-31' },
-                            { title: 'TGIT', date: '2020-03-19' }
+                            { title: 'TGIT', date: '2020-03-19' },
+                            { title: 'Students Pool Tournament', date: '2020-04-15' }
                           ]}
                         eventClick= {this.props.eventExamed} 
                     />
