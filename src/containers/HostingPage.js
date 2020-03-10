@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import Aux from '../hoc/Aux';
 import FilterBar from '../components/FilterBar';
-import HostingCards from '../components/HostingCards';
+import HostingEvents from '../components/HostingEvents';
+import SearchService from '../services/SearchService';
 
 
 class HostingPage extends Component {
     constructor(props) {
         super(props);
         
+        
 
     }
-    
-    
+
+
         
     render( ) {
         return(
@@ -29,9 +31,7 @@ class HostingPage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-md">
-                    <HostingCards />
-                </div>
+                <HostingEvents />
                 
             </Aux>
             
