@@ -12,7 +12,10 @@ class SearchService {
         new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Pool', 'Game', 'Game of Pool'
             , 'Detailed Desc.', [])];
 
-    #hostingCards = [];
+    #hostingCards = [
+        // new EventCard('https://i.picsum.photos/id/866/200/300.jpg', 'Random', 'Mountains', 'Large'
+        // , 'Detailed Desc.', [], Date(), 'Nepal')
+    ];
 
     static getInstance() {
         return this.instance == null ? new SearchService() : this.instance;

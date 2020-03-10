@@ -27,8 +27,11 @@ class AgoraNavbar extends React.Component {
     };
 
     fireCreateEvent = () => {
-        console.log("create event");
         this.props.history.push('/createEvent');
+    };
+
+    fireHostingEvent = () => {
+        this.props.history.push('/hosting');
     };
 
     render() {
@@ -42,7 +45,7 @@ class AgoraNavbar extends React.Component {
                             type="button">Create Event
                     </button>
                     <button onClick={this.fireUpcoming} className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Upcoming</button>
-                    <button className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Hosting</button>
+                    <button onClick={this.fireHostingEvent} className="btn btn-outline-info mr-sm-4 my-2 my-sm-0" type="button">Hosting</button>
                     <input onChange={this.searchParamChange} className="form-control mr-sm-4" type="search"
                            placeholder="Search Event"
                            aria-label="Search"/>
