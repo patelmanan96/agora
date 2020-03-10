@@ -6,10 +6,9 @@ class SearchService {
         , 'Khoury College of Computer Science', 'Detailed Desc.', []),
         new EventCard('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80', 'Career Fair', '3/24/3030 10:00am', 'Curry Student Center'
             , 'Detailed Desc.', ['dangerous']),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'Net Working For Art and Design Students', '3/31/2020 1:00pm', 'Ryder Hall'
-            , 'Detailed Desc.', []),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Students Pool Tournaments', '4/15/2020 7:00pm', 'Curry Student Center'
-            , 'Detailed Desc.', [])];
+        new EventCard('https://images.unsplash.com/photo-1569437061241-a848be43cc82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80', 'Mental Health Awareness Month', '4/16/2020 1:00pm', 'Ryder Hall'
+            , 'Detailed Desc.', [])]
+   
 
     static getInstance() {
         return this.instance == null ? new SearchService() : this.instance;
