@@ -9,7 +9,7 @@ const hostingEvents = (props) => (
         <div className="pre-scrollable bg-light">
             {SearchService.getInstance().getHostingCards().map((card) => {
                 return <div className="m-5">
-                    <HostingCards hostingCardProps={card} clickMore={props.eventDetail}/>
+                    <HostingCards hostingCardProps={card}/>
                 </div>
             })}
         </div>
