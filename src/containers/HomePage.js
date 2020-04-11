@@ -29,21 +29,21 @@ class Homepage extends Component {
 
     eventDetailHandler = () => { //triggered when a calendar event clicked
         this.setState({eventDetail: true});
-    }
+    };
 
     eventDetailCancleHandler = () => {
         this.setState({eventDetail: false})
-    }
+    };
 
     render () {
         return (
             <Aux>
-                <div className="container" style={{marginTop: 70}}>
+                <div className="container mb-5 mt-5">
                     <div className="row">
-                        <div className="col-sm-7">
+                        <div className="container mb-5 col-sm-7">
                             <CalendarEvents eventExamed={this.eventDetailHandler}/>
                         </div>
-                        <div className="col-sm-5"> 
+                        <div className="col-sm-5">
                             <RecommendEvents eventDetail={this.eventDetailHandler}/>
                         </div>
                     </div>
