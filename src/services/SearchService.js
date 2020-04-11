@@ -3,14 +3,14 @@ import EventCard from "../models/EventCard";
 class SearchService {
     static instance = null;
 
-    #eventCards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane', 'Avionics'
-        , 'Flying Plane', 'Detailed Desc.', []),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/baboon.png', 'Baboon', 'Animal', 'Wild Animal'
-            , 'Detailed Desc.', ['dangerous']),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'City', 'Place', 'Quiet City'
-            , 'Detailed Desc.', []),
-        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Pool', 'Game', 'Game of Pool'
-            , 'Detailed Desc.', [])];
+    #eventCards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane', ['Avionics','Flight']
+        , 'Flying Plane', 'Detailed Desc.', new Date()),
+        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/baboon.png', 'Baboon', ['Animal'], 'Wild Animal'
+            , 'Detailed Desc.', new Date()),
+        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'City', ['Place'], 'Quiet City'
+            , 'Detailed Desc.', new Date()),
+        new EventCard('https://homepages.cae.wisc.edu/~ece533/images/pool.png', 'Pool', ['Game'], 'Game of Pool'
+            , 'Detailed Desc.', new Date())];
 
     #hostingCards = [
         // new EventCard('https://i.picsum.photos/id/866/200/300.jpg', 'Random', 'Mountains', 'Large'
@@ -29,9 +29,8 @@ class SearchService {
 
     #queryMatchCards = (card, query) => {
         return (card.title.toLowerCase().includes(query) ||
-            card.tag.toLowerCase().includes(query) ||
-            card.summary.toLowerCase().includes(query) ||
-            (card.othertags.filter(tag => tag.includes(query)).length > 0))
+            (card.tags.find(tag => tag.toLowerCase().includes(query)) !== undefined) ||
+            card.summary.toLowerCase().includes(query))
     };
 
     getHostingCards = () => this.#hostingCards;
@@ -39,7 +38,7 @@ class SearchService {
     getRecommendedCards = () => this.#eventCards;
 
     addNewCard = (card) => {
-        let newCard = new EventCard(card.image, card.title, card.tag, card.summary, card.description, card.othertags);
+        let newCard = new EventCard(card.image, card.title, card.tags, card.summary, card.description);
         this.#eventCards = [...newCard]
     };
 }
