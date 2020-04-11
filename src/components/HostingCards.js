@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 class HostingCards extends Component {
     constructor(props){
-        super(props) 
-        
+        super(props)
+
     }
     render(){
-        
+
             return (
             <div className="card">
                 <div className="card-header">
-                    {this.props.hostingCardProps.tag}
+                    {this.props.hostingCardProps.tags}
                 </div>
             <div className="card-body">
                 <img src={this.props.hostingCardProps.image} className="card-img-top img-fluid" alt="..."/>
@@ -20,9 +20,6 @@ class HostingCards extends Component {
             </div>
         </div>
             )
-    
-            
-        
     }
 }
 
