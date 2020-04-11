@@ -6,12 +6,8 @@ import Backdrop from './backdrop';
 
 const modal = (props) => (
     <Aux>
-        <Backdrop show={props.show} backdropClicked={props.modalClosed}/>
-        <div className="Modal"
-        style={{
-            transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
-            opacity: props.show ? '1' : '0'
-        }}>
+        <Backdrop backdropClicked={props.modalClosed}/>
+        <div className="Modal">
         {props.children}
         </div>
     </Aux>

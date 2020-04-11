@@ -10,7 +10,7 @@ class SingleEventModal extends Component {
   render() {
      
     return (
-      <Modal show={this.props.show} modalClosed={this.props.modalClosed}>
+      <Modal modalClosed={this.props.modalClosed}>
         <div>{this.props.card.title}</div>
         <div>{this.props.card.image}</div>
       </Modal>

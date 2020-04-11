@@ -28,7 +28,6 @@ class Homepage extends Component {
     } 
 
     eventDetailHandler = () => { //triggered when a calendar event clicked
-        
         this.setState({eventDetail: true});
     };
 
@@ -48,9 +47,10 @@ class Homepage extends Component {
                             <RecommendEvents eventDetail={this.eventDetailHandler}/>
                         </div>
                     </div>
-                    <Modal show={this.state.eventDetail} modalClosed={this.eventDetailCancleHandler}>
+                    {this.state.eventDetail &&
+                    <Modal modalClosed={this.eventDetailCancleHandler}>
                         <EventSummary eventInfo={this.state.eventInfo}/>
-                    </Modal>
+                    </Modal>}
                 </div>
             </Aux>
             
