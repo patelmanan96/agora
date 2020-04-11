@@ -28,6 +28,7 @@ class Homepage extends Component {
     } 
 
     eventDetailHandler = () => { //triggered when a calendar event clicked
+        
         this.setState({eventDetail: true});
     };
 
