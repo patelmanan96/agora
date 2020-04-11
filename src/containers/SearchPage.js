@@ -9,14 +9,14 @@ class SearchPage extends React.Component {
         this.searchService = SearchService.getInstance();
         this.state = {
             query: this.props.match.params.query,
-            cards: this.chunk(this.searchService.getCards(this.props.match.params.query), 3),
+            cards: this.chunk(this.searchService.getCards(this.props.match.params.query)
+                .sort((card1, card2) => card1.title.localeCompare(card2.title)), 3),
             sort: 'title'
         };
     }
 
-    changeSort = (sortType) => {
+    changeSort = (sortType, currentCards = this.searchService.getCards(this.props.match.params.query)) => {
         this.setState({sort: sortType});
-        let currentCards = this.searchService.getCards(this.props.match.params.query);
         if (sortType === 'title') {
             let titleSorted = currentCards.sort((card1, card2) => card1.title.localeCompare(card2.title));
             this.setState({cards: this.chunk(titleSorted, 3)})
@@ -26,6 +26,15 @@ class SearchPage extends React.Component {
         } else {
             let laterSorted = currentCards.sort((card1, card2) => card1.date > card2.date ? 1 : -1);
             this.setState({cards: this.chunk(laterSorted, 3)})
+        }
+    };
+
+    changeFilter = (filterType) => {
+        if(filterType !== "ignore"){
+            let queriedCards = this.searchService.getCards(filterType);
+            this.changeSort(this.state.sort, queriedCards);
+        } else {
+            this.changeSort(this.state.sort);
         }
     };
 
@@ -47,6 +56,7 @@ class SearchPage extends React.Component {
                     <div className="col-sm">
                         <FilterBar sortValue={this.state.sort}
                                    changeSort={this.changeSort}
+                                   changeFilter={this.changeFilter}
                         />
                     </div>
                 </div>

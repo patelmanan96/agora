@@ -11,7 +11,7 @@ class SearchCard extends React.Component {
                     <h5>{this.props.cardProps.title}</h5>
                 </div>
                 <div className="card-body">
-                    <img src={this.props.cardProps.image} className="card-img-top img-fluid" alt="..."/>
+                    <img src={this.props.cardProps.image} className="card-img-top" alt="..."/>
                     <h6 className="card-title mt-2">{this.props.cardProps.summary}</h6>
                     <p className="card-text">{this.props.cardProps.date.toLocaleString()}</p>
                     <a href="#" className="btn btn-primary" onClick={this.props.clickMore}>More..</a>
