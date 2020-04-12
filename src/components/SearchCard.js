@@ -14,20 +14,19 @@ class SearchCard extends React.Component {
     this.setState({ SingleEventModalOpen: true });
   };
 
-  modalClosed = () => {
-    console.log("here");
+  closeModal = () => {
     this.setState({ SingleEventModalOpen: false });
   };
 
   render() {
     return (
       <div className="card">
-        {this.state.SingleEventModalOpen && (
+        {this.state.SingleEventModalOpen ? (
           <SingleEventModal
             card={this.props.cardProps}
-            modalClosed={this.modalClosed}
+            closeModal={this.closeModal}
           />
-        )}
+        ) : null}
         <div className="card-header">
           <h5>{this.props.cardProps.title}</h5>
         </div>

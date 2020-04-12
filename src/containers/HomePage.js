@@ -48,7 +48,7 @@ class Homepage extends Component {
                         </div>
                     </div>
                     {this.state.eventDetail &&
-                    <Modal modalClosed={this.eventDetailCancleHandler}>
+                    <Modal closeModal={this.eventDetailCancleHandler}>
                         <EventSummary eventInfo={this.state.eventInfo}/>
                     </Modal>}
                 </div>

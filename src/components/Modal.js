@@ -1,12 +1,11 @@
 import React from 'react';
 import './Modal.css';
 import Aux from '../hoc/Aux';
-import Backdrop from './backdrop';
 
 
 const modal = (props) => (
     <Aux>
-        <Backdrop backdropClicked={props.modalClosed}/>
+        <div className="Backdrop" onClick={props.closeModal}></div>
         <div className="Modal">
         {props.children}
         </div>
