@@ -10,7 +10,9 @@ import "@fullcalendar/daygrid/main.css";
     class CalendarEvents extends Component {
         constructor(props) {
             super(props);
+            console.log(props);
         }
+        
        
         render() {
             
@@ -26,7 +28,8 @@ import "@fullcalendar/daygrid/main.css";
                             { title: 'TGIT', date: '2020-03-19' },
                             { title: 'Students Pool Tournament', date: '2020-04-15' }
                           ]}
-                        eventClick= {this.props.eventExamed} 
+                        eventClick= {this.props.examEvent
+                        } 
                     />
                     
                 </Aux>

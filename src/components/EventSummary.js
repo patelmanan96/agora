@@ -2,13 +2,7 @@ import React from 'react';
 import Aux from '../hoc/Aux';
 
 const eventSummary = (props) => {
-    // const eventSummary = Object.keys(props.eventInfo)
-    //                     .map(infoKey => {
-    //                     return(<li key={infoKey}>
-    //                             <span style={{textTransform: 'capitalize'}}>{infoKey}</span>: {props.eventInfo[infoKey]}
-    //                           </li>)
-    //                     })
-                        
+    console.log(props);
     return (
         <Aux>
             <ul>
