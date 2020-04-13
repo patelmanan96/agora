@@ -18,6 +18,7 @@
     "font-awesome": "^4.7.0",
     "fullcalendar-reactwrapper": "^1.0.7",
     "react": "^16.13.0",
+    "react-avatar": "^3.9.2",
     "react-dnd": "^10.0.2",
     "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.13.0",
