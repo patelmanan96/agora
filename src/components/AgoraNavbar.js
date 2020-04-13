@@ -1,6 +1,7 @@
 import React from 'react';
 import './AgoraNavbar.css'
 import {Link} from 'react-router-dom';
+import Aux from '../hoc/Aux';
 
 class AgoraNavbar extends React.Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class AgoraNavbar extends React.Component {
 
     render() {
         return (
+            <Aux>
             <nav className="navbar navbar-dark bg-dark">
                 <Link to="/" className="Nav__brand">
                     <a className="navbar-brand" href="#"><h1>Agora</h1></a>
@@ -79,6 +81,8 @@ class AgoraNavbar extends React.Component {
 
                  </form>
             </nav>
+            <h4><strong>Spot your events at NU</strong></h4>
+            </Aux>
         )
     }
 }
