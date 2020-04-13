@@ -2,6 +2,7 @@ import React from "react";
 import SingleEventModal from "./SingleEventModal";
 
 class SearchCard extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -47,5 +48,6 @@ class SearchCard extends React.Component {
       </div>
     );
   }
+
 }
 export default SearchCard;
