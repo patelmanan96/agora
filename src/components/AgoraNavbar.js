@@ -81,7 +81,7 @@ class AgoraNavbar extends React.Component {
 
                  </form>
             </nav>
-            <h4><strong>Spot your events at NU</strong></h4>
+            <h4><strong>Spot your events at NU!</strong></h4>
             </Aux>
         )
     }
