@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import CalendarEvents from '../components/CalendarEvents';
 import RecommendEvents from '../components/RecommendEvents';
 import Modal from '../components/Modal';
-import SingleEventModal from '../components/SingleEventModal';
 import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
+import SearchService from "../services/SearchService";
 
 
 class Homepage extends Component {
@@ -28,7 +28,9 @@ class Homepage extends Component {
         }
     } 
 
-    eventDetailHandler = () => { //triggered when a calendar event clicked
+    eventDetailHandler = (event) => { //triggered when a calendar event clicked
+        let card = SearchService.getInstance().findCardById(event.event.id);
+        console.log(card);
         this.setState({eventDetail: true});
     };
 

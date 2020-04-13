@@ -1,4 +1,6 @@
-function EventCard(img, title, tags, summary, desc, date, location) {
+function EventCard(eventId, createdBy, img, title, tags, summary, desc, date, location) {
+    this.id = eventId;
+    this.createdBy = createdBy;
     this.image = img;
     this.title = title;
     this.tags = tags;
