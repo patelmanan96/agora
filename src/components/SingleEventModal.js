@@ -12,10 +12,11 @@ class SingleEventModal extends Component {
      
     return (
       <Modal closeModal={this.props.closeModal}>
-        <div className='card'>
+        <div className='card' >
             <div className='card-header'>{this.props.card.title}</div>
             <div className='card-body'>
-                    <img class='card-img-top' src={this.props.card.image} alt='eventImg'></img>
+                    <img class='card-img-top' src={this.props.card.image} 
+                    alt='eventImg'/>
                 <h6 className="card-title mt-2">{this.props.card.summary}</h6>
                 <p className="card-text">
                     {this.props.card.date.toLocaleString()}

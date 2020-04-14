@@ -58,7 +58,7 @@ class AgoraNavbar extends React.Component {
                         className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0 
                         ${this.props.location.pathname === '/upcoming' ? 'current' : ''}`} 
                         type="button">
-                        My Upcoming Events
+                        Upcoming Events
                     </button>
 
                     <button onClick={this.fireHostingEvent} 
