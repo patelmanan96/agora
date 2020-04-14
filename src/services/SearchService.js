@@ -15,7 +15,7 @@ class SearchService {
         this.#getDateObjectsFromYear(2010)];
 
     #eventCards = [new EventCard('https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'Airplane',
-        ['Avionics', 'Flight', 'Science'], 'Flying Plane', 'Detailed Desc.', this.#dates[0]),
+        ['Avionics', 'Flight', 'Science'], 'Flying Plane', 'Detailed Desc. Detailed Desc.Detailed Desc.Detailed Desc.Detailed Desc.Detailed Desc.Detailed Desc.Detailed Desc.Detailed Desc.', this.#dates[0]),
         new EventCard('https://homepages.cae.wisc.edu/~ece533/images/goldhill.png', 'City', ['Place'], 'Quiet City'
             , 'Detailed Desc.', this.#dates[1]),
         new EventCard('https://homepages.cae.wisc.edu/~ece533/images/baboon.png', 'Baboon', ['Animal'], 'Wild Animal'
