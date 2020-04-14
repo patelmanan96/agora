@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import CalendarEvents from '../components/CalendarEvents';
 import RecommendEvents from '../components/RecommendEvents';
 import Modal from '../components/Modal';
-import SingleEventModal from '../components/SingleEventModal';
 import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
+
 
 
 class Homepage extends Component {

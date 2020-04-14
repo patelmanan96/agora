@@ -2,6 +2,7 @@ import React from 'react';
 import './AgoraNavbar.css'
 import {Link} from 'react-router-dom';
 import Aux from '../hoc/Aux';
+import {GoHome} from "react-icons/go";
 
 class AgoraNavbar extends React.Component {
     constructor(props) {
@@ -43,7 +44,7 @@ class AgoraNavbar extends React.Component {
             <Aux>
             <nav className="navbar navbar-dark bg-dark">
                 <Link to="/" className="Nav__brand">
-                    <a className="navbar-brand" href="#"><h1>Agora</h1></a>
+                    <a className="navbar-brand" href="#"><h1>Agora <GoHome /></h1></a>
                 </Link>
                 <form className="form-inline form-group row ml-4 mr-3"> 
 
