@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Aux from '../hoc/Aux';
-import FilterBar from '../components/FilterBar';
 import SearchService from '../services/SearchService';
 import SearchCard from "../components/SearchCard";
+import HostingFilterBar from "../components/HostingFilterBar";
 
 
 class HostingPage extends Component {
@@ -15,7 +15,7 @@ class HostingPage extends Component {
         };
     }
 
-    changeSort = (sortType, currentCards = this.searchService.getCards(this.props.match.params.query)) => {
+    changeSort = (sortType, currentCards = this.searchService.getHostingCards()) => {
         this.setState({sort: sortType});
         if (sortType === 'title') {
             let titleSorted = currentCards.sort((card1, card2) => card1.title.localeCompare(card2.title));
@@ -50,7 +50,7 @@ class HostingPage extends Component {
                         </div>
 
                         <div className="col-sm">
-                            <FilterBar sortValue={this.state.sort}
+                            <HostingFilterBar sortValue={this.state.sort}
                                        changeSort={this.changeSort}
                                        changeFilter={this.changeFilter}
                             />
@@ -58,7 +58,7 @@ class HostingPage extends Component {
                     </div>
                 </div>
                 <div className="pre-scrollable bg-light">
-                    {SearchService.getInstance().getHostingCards().map((card) => {
+                    {this.state.cards.map((card) => {
                         return <div className="m-5">
                             <SearchCard cardProps={card}/>
                         </div>

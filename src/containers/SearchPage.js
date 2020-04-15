@@ -20,7 +20,7 @@ class SearchPage extends React.Component {
         if (sortType === 'title') {
             let titleSorted = currentCards.sort((card1, card2) => card1.title.localeCompare(card2.title));
             this.setState({cards: this.chunk(titleSorted, 3)})
-        } else if (sortType === 'sooner') {
+        } else if (sortType === 'later') {
             let soonerSorted = currentCards.sort((card1, card2) => card1.date < card2.date ? 1 : -1);
             this.setState({cards: this.chunk(soonerSorted, 3)})
         } else {

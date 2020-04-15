@@ -1,5 +1,5 @@
 class EventCard {
-    constructor(eventId, createdBy, img, title, tags, summary, desc, date, location) {
+    constructor(eventId, createdBy, img, title, tags, summary, desc, date, location, attending = false) {
         this._eventId = eventId;
         this._createdBy = createdBy;
         this._img = img;
@@ -9,6 +9,15 @@ class EventCard {
         this._desc = desc;
         this._date = date;
         this._location = location;
+        this._attending = attending;
+    }
+
+    get attending() {
+        return this._attending;
+    }
+
+    set attending(value) {
+        this._attending = value;
     }
 
     get eventId() {
