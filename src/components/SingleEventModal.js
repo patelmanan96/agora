@@ -25,10 +25,7 @@ class SingleEventModal extends Component {
                   <strong>{`Location: ${this.props.card.location}`} </strong>
                 </p>
                 <p className="card-text">
-                    {this.props.card.description}
-                </p>
-                <p className="card-text">
-                    {this.props.card.description}
+                    {this.props.card.desc}
                 </p>
                 <button className="btn btn-primary">
                     Attend
