@@ -38,5 +38,3 @@ class CalendarEvents extends Component {
 
 
 export default CalendarEvents;
-
-

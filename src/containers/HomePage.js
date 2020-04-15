@@ -7,10 +7,11 @@ import EventSummary from '../components/EventSummary';
 import SearchService from "../services/SearchService";
 
 
+
 class Homepage extends Component {
     constructor(props){
         super(props);
-    
+
         this.state = {
             eventInfo: {
                 eventTitle: "",
@@ -19,19 +20,22 @@ class Homepage extends Component {
                 address:"",
                 organizer:""
             },
-            
+
             attend: false,
             remove: false,
             host:false,
             eventDetail: false
 
         }
-    } 
+    }
 
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
-        let card = SearchService.getInstance().findCardById(event.event.id);
-        console.log(card);
-        this.setState({eventDetail: true});
+        console.log(event)
+        console.log(event.event.title)
+        console.log(event.event.extraParams)
+        //console.log(event.event.date)
+        // this.setState({eventDetail: true});
+
     };
 
     eventDetailCancleHandler = () => {
@@ -41,6 +45,7 @@ class Homepage extends Component {
     render () {
         return (
             <Aux>
+                <h4 style={{marginTop:"50px", color:"rgba(22, 96, 171, 0.97)"}}><strong><i>Spot your events at NU!</i></strong></h4>
                 <div className="container mb-5 mt-5">
                     <div className="row">
                         <div className="container mb-5 col-sm-7">
@@ -56,9 +61,9 @@ class Homepage extends Component {
                     </Modal>}
                 </div>
             </Aux>
-            
-                
-            
+
+
+
         );
     }
 }

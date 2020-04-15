@@ -2,6 +2,7 @@ import React from 'react';
 import './AgoraNavbar.css'
 import {Link} from 'react-router-dom';
 import Aux from '../hoc/Aux';
+import {GoHome} from "react-icons/go";
 
 class AgoraNavbar extends React.Component {
     constructor(props) {
@@ -48,13 +49,13 @@ class AgoraNavbar extends React.Component {
                     <form className="form-inline form-group row ml-4 mr-3">
 
                         <button onClick={this.fireCreateEvent}
-                                className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0 
+                                className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
                         ${this.props.location.pathname === '/createEvent' ? 'current' : ''}`}
                                 type="button">Create an Event
                         </button>
 
                         <button onClick={this.fireUpcoming}
-                                className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0 
+                                className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
                         ${this.props.location.pathname === '/upcoming' ? 'current' : ''}`}
                                 type="button">
                             My Upcoming Events

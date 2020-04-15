@@ -12,13 +12,20 @@ class SingleEventModal extends Component {
      
     return (
       <Modal closeModal={this.props.closeModal}>
-        <div className='card'>
-            <div className='card-header'>{this.props.card.title}</div>
+        <div className='card' >
+            <div className='card-header'><strong>{this.props.card.title}</strong></div>
             <div className='card-body'>
-                    <img class='card-img-top' src={this.props.card.image} alt='eventImg'></img>
+                    <img class='card-img-top' src={this.props.card.image} 
+                    alt='eventImg'/>
                 <h6 className="card-title mt-2">{this.props.card.summary}</h6>
                 <p className="card-text">
-                    {this.props.card.date.toLocaleString()}
+                   <strong> {this.props.card.date.toLocaleString()} </strong>
+                </p>
+                <p classNam="card-text">
+                  <strong>{`Location: ${this.props.card.location}`} </strong>
+                </p>
+                <p className="card-text">
+                    {this.props.card.description}
                 </p>
                 <p className="card-text">
                     {this.props.card.description}
