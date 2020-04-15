@@ -29,7 +29,7 @@ class SearchCard extends React.Component {
           />
         ) : null}
         <div className="card-header">
-          <h5>{this.props.cardProps.title}</h5>
+          <h5><strong>{this.props.cardProps.title}</strong></h5>
         </div>
         <div className="card-body">
           <img
@@ -40,6 +40,9 @@ class SearchCard extends React.Component {
           <h6 className="card-title mt-2">{this.props.cardProps.summary}</h6>
           <p className="card-text">
             {this.props.cardProps.date.toLocaleString()}
+          </p>
+          <p className="card-text">
+            {`Location: ${this.props.cardProps.location} `}
           </p>
           <button className="btn btn-primary" onClick={this.openModal}>
             More..
