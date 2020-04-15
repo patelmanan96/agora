@@ -23,7 +23,7 @@ class AgoraNavbar extends React.Component {
     fireSearch = () => {
         if (this.state.query.trim() !== '*')
             this.props.history.push('/search/' + this.state.query)
-        else alert("Please input a event you are interested in")// form validation bootstrap
+        
             
     };
 
@@ -69,11 +69,15 @@ class AgoraNavbar extends React.Component {
                         My Hosting Events
                     </button>
 
-                    <input onChange={this.searchParamChange} 
-                        className ='form-control mr-sm-4'
-                            type="search"
-                           placeholder="Search Event"
-                           aria-label="Search"/>
+                    <div >
+                        <input onChange={this.searchParamChange} 
+                            className ='form-control is-invalid mr-sm-4'
+                                type="search"
+                            placeholder="Search an Event"
+                            aria-label="Search" required />
+                        
+                    </div>
+                    
 
                     <button onClick={this.fireSearch} 
                         className="btn btn-outline-success my-2 my-sm-0"

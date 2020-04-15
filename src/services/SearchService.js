@@ -16,24 +16,24 @@ class SearchService {
         return d;
     };
 
-    #dates = [this.#getDateObjectsFromYear(1990),
-        this.#getDateObjectsFromYear(2000), this.#getDateObjectsFromYear(2020),
-        this.#getDateObjectsFromYear(2010)];
+    #dates = [this.#getDateObjectsFromYear(2020),
+        this.#getDateObjectsFromYear(2020), this.#getDateObjectsFromYear(2020),
+        this.#getDateObjectsFromYear(2020)];
 
     #eventCards = [new EventCard(networking, 'Graduate Students Networking',
         ['career', 'graduate', 'networking','Science'], 'Build your networking for your future career', 
         'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book', 
         this.#dates[0], "WVH"),
-        new EventCard(writing, 'Phd Students Writing Workshop', ['writing'], 'Leverage your thesis!'
+        new EventCard(writing, 'Phd Students Writing Workshop', ['writing', 'Computer', 'Engineering', 'Society', 'Health', 'Business', 'Law', 'History'], 'Leverage your thesis!'
             , 'remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 
             this.#dates[1], "Snell Library"),
-        new EventCard(smartphone, 'Smartphone Research Study', ['research'], 'Research volunteers wanted!'
+        new EventCard(smartphone, 'Smartphone Research Study', ['research', 'Computer', 'Science','Health', 'Engineering'], 'Research volunteers wanted!'
             , 'looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source', 
             this.#dates[2], "265 Nightingale Hall"),
-        new EventCard(yoga, 'Yoga', ['exercise', 'yoga', 'health'], 'Practice yoga with us!'
+        new EventCard(yoga, 'Yoga', ['exercise', 'yoga', 'health', 'self care'], 'Practice yoga with us!'
             , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
             this.#dates[3], "200 Ell Hall"),
-        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'care', 'health'], 'Self care matters'
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
             , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
             this.#dates[3], "200 Ell Hall")
         ];

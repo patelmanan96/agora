@@ -7,6 +7,7 @@ import "@fullcalendar/daygrid/main.css";
 import SearchService from '../services/SearchService';
 
 
+
     
     class CalendarEvents extends Component {
         constructor(props) {
@@ -19,7 +20,7 @@ import SearchService from '../services/SearchService';
             
             return (
                 <Aux style={{marginRight: 20}}>
-                    <h3 style={{textAlign:"left", marginBottom: 20}}><i>Upcoming Events</i></h3>
+                    <h3 style={{textAlign:"left", marginBottom: 20}}><i>My Upcoming Events</i></h3>
                     <FullCalendar
                         defaultView="dayGridMonth"
                         plugins={[dayGridPlugin]}

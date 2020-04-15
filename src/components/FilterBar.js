@@ -17,9 +17,11 @@ class FilterBar extends React.Component {
                     <option value="engineering">Engineering</option>
                     <option value="health">Health</option>
                     <option value="law">Law</option>
-                    <option value="business">Business</option>
-                    <option value="history">History</option>
-                    <option value="society">Society</option>
+                    <option value="writing">Writing</option>
+                    <option value="career">Career</option>
+                    <option value="research">Research</option>
+                    <option value="exercise">Exercise</option>
+                    <option value="self care">Self Care</option>
                 </select>
                 <label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">Sort By : </label>
                 <select value={this.props.sortValue} onChange={(event) => this.props.changeSort(event.target.value)}
