@@ -21,8 +21,9 @@ class AgoraNavbar extends React.Component {
     };
 
     fireSearch = () => {
-        if (this.state.query !== '')
+        if (this.state.query.trim() !== '*')
             this.props.history.push('/search/' + this.state.query)
+        else alert("Please input a event you are interested in")// form validation bootstrap
             
     };
 

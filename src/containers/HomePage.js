@@ -29,11 +29,8 @@ class Homepage extends Component {
     } 
 
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
-        console.log(event)
-        console.log(event.event.title)
-        console.log(event.event.extraParams)
-        //console.log(event.event.date)
-        // this.setState({eventDetail: true});
+        
+        this.setState({eventDetail: true});
     
     };
 

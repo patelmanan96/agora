@@ -21,7 +21,7 @@ class SearchService {
         this.#getDateObjectsFromYear(2010)];
 
     #eventCards = [new EventCard(networking, 'Graduate Students Networking',
-        ['career', 'graduate', 'networking'], 'Build your networking for your future career', 
+        ['career', 'graduate', 'networking','Science'], 'Build your networking for your future career', 
         'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book', 
         this.#dates[0], "WVH"),
         new EventCard(writing, 'Phd Students Writing Workshop', ['writing'], 'Leverage your thesis!'
