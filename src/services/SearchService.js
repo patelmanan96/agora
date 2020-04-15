@@ -12,15 +12,17 @@ class SearchService {
     static CURRENT_USER = "userDefault";
     static OTHER_USER = "otherDefault";
 
-    #getDateObjectsFromYear = (year) => {
+    #getDateObjectsFromDay = (day) => {
         let d = new Date();
-        d.setFullYear(year);
+        d.setFullYear(new Date().getFullYear());
+        d.setMonth(new Date().getMonth());
+        d.setDate(day);
         return d;
     };
 
-    #dates = [this.#getDateObjectsFromYear(1990),
-        this.#getDateObjectsFromYear(2000), this.#getDateObjectsFromYear(2020),
-        this.#getDateObjectsFromYear(2010)];
+    #dates = [this.#getDateObjectsFromDay(12),
+        this.#getDateObjectsFromDay(15), this.#getDateObjectsFromDay(25),
+        this.#getDateObjectsFromDay(10)];
 
     #eventCards = [new EventCard(1, SearchService.CURRENT_USER, networking, 'Graduate Students Networking',
         ['career', 'graduate', 'networking'], 'Build your networking for your future career',
@@ -64,7 +66,7 @@ class SearchService {
 
     getRecommendedCards = () => this.#eventCards;
 
-    findCardById = (id) => this.#eventCards[0];
+    findCardById = (id) => this.#eventCards.find(card => parseInt(card.eventId) === parseInt(id));
 
     getAllUpcomingCards = () => this.#eventCards;
 

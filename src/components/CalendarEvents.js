@@ -24,7 +24,7 @@ class CalendarEvents extends Component {
                     plugins={[dayGridPlugin]}
                     events={
                         SearchService.getInstance().getMyUpcomingCards().map(card => {
-                            return {title: card.title, date: card.date, id: card.id}
+                            return {title: card.title, date: card.date, id: card.eventId}
                         })
                     }
                     eventClick={this.props.examEvent}
