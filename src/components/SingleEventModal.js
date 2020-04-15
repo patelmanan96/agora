@@ -15,7 +15,7 @@ class SingleEventModal extends Component {
         <div className='card' >
             <div className='card-header'><strong>{this.props.card.title}</strong></div>
             <div className='card-body'>
-                    <img class='card-img-top' src={this.props.card.image} 
+                    <img class='card-img-top' src={this.props.card.img}
                     alt='eventImg'/>
                 <h6 className="card-title mt-2">{this.props.card.summary}</h6>
                 <p className="card-text">
