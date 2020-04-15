@@ -4,13 +4,14 @@ import RecommendEvents from '../components/RecommendEvents';
 import Modal from '../components/Modal';
 import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
+import SearchService from "../services/SearchService";
 
 
 
 class Homepage extends Component {
     constructor(props){
         super(props);
-    
+
         this.state = {
             eventInfo: {
                 eventTitle: "",
@@ -19,22 +20,19 @@ class Homepage extends Component {
                 address:"",
                 organizer:""
             },
-            
+
             attend: false,
             remove: false,
             host:false,
             eventDetail: false
 
         }
-    } 
+    }
 
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
-        console.log(event)
-        console.log(event.event.title)
-        console.log(event.event.extraParams)
-        //console.log(event.event.date)
-        // this.setState({eventDetail: true});
-    
+        // Card to be modaly displayed
+        let cardSelected = SearchService.getInstance().findCardById(event.event.id);
+        this.setState({eventDetail: true});
     };
 
     eventDetailCancleHandler = () => {
@@ -60,9 +58,9 @@ class Homepage extends Component {
                     </Modal>}
                 </div>
             </Aux>
-            
-                
-            
+
+
+
         );
     }
 }

@@ -27,6 +27,9 @@ class SingleEventModal extends Component {
                 <p className="card-text">
                     {this.props.card.description}
                 </p>
+                <p className="card-text">
+                    {this.props.card.description}
+                </p>
                 <button className="btn btn-primary">
                     Attend
                 </button> 
