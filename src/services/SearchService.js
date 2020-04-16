@@ -22,7 +22,7 @@ let eventCards = [new EventCard(1, "otherDefault", networking, 'Graduate Student
     new EventCard(3, "otherDefault", smartphone, 'Smartphone Research Study', ['research'], 'Research volunteers wanted!'
         , 'looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+3), "265 Nightingale Hall"),
-    new EventCard(4, "otherDefault", yoga, 'Yoga', ['exercise', 'yoga', 'health'], 'Practice yoga with us!'
+    new EventCard(4, "userDefault", yoga, 'Yoga', ['exercise', 'yoga', 'health'], 'Practice yoga with us!'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+5), "200 Ell Hall"),
     new EventCard(5, "userDefault", mentalHealth, 'Mental Health Awareness Month', ['mental health', 'care', 'health'], 'Self care matters'

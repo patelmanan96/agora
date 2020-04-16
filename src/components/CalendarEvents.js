@@ -18,7 +18,7 @@ class CalendarEvents extends Component {
 
         return (
             <Aux style={{marginRight: 20}}>
-                <h3 style={{textAlign: "left", marginBottom: 20}}><i>Upcoming Events</i></h3>
+                <h3 style={{textAlign: "left", marginBottom: 20}}><i>My Upcoming Events</i></h3>
                 <FullCalendar
                     defaultView="dayGridMonth"
                     plugins={[dayGridPlugin]}

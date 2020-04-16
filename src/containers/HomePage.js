@@ -27,7 +27,7 @@ class Homepage extends Component {
             eventDetail: false,
             cards: SearchService.getInstance().getRecommendedCards()
 
-        }
+        };
 
         this.searchService= SearchService.getInstance();
     }
