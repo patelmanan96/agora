@@ -30,7 +30,7 @@ class SingleEventModal extends Component {
                         </p>
 
                         {this.props.card.createdBy === "otherDefault" ? (Boolean(this.props.card.attending) ?
-                            <button onClick={this.props.cancelAttending} className="btn btn-danger">
+                            <button onClick={() => this.props.cancelAttending(this.props.card)} className="btn btn-danger">
                                 Attending
                             </button> : <button onClick={() => this.props.attendEvent(this.props.card)} className="btn btn-primary">
                                 Attend

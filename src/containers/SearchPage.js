@@ -45,10 +45,16 @@ class SearchPage extends React.Component {
 
     attendEvent = (card) => {
         // alert(card)
-        card.attending = true
-        this.searchService.updateCard(card)
-        this.changeSort(this.state.sort)
-    }
+        card.attending = true;
+        this.searchService.updateCard(card);
+        this.changeSort(this.state.sort);
+    };
+
+    cancelAttending = (card) => {
+        card.attending = false;
+        this.searchService.updateCard(card);
+        this.changeSort(this.state.sort);
+    };
 
     render() {
         return (
@@ -75,6 +81,7 @@ class SearchPage extends React.Component {
                             <div className="card-columns">
                                 {chunk.map(card => <SearchCard cardProps={card}
                                                                attendEvent={this.attendEvent}
+                                                               cancelAttending={this.cancelAttending}
                                 />)}
                             </div>
                         </div>
