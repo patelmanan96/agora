@@ -30,7 +30,7 @@ class SearchPage extends React.Component {
     };
 
     changeFilter = (filterType) => {
-        if(filterType !== "ignore"){
+        if (filterType !== "ignore") {
             let queriedCards = this.searchService.getCards(filterType);
             this.changeSort(this.state.sort, queriedCards);
         } else {
@@ -42,6 +42,13 @@ class SearchPage extends React.Component {
         Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
             arr.slice(i * size, i * size + size)
         );
+
+    attendEvent = (card) => {
+        // alert(card)
+        card.attending = true
+        this.searchService.updateCard(card)
+        this.changeSort(this.state.sort)
+    }
 
     render() {
         return (
@@ -66,7 +73,9 @@ class SearchPage extends React.Component {
                     return <div className="row m-5">
                         <div className="col-sm ml-5 mr-5">
                             <div className="card-columns">
-                                {chunk.map(card => <SearchCard cardProps={card}/>)}
+                                {chunk.map(card => <SearchCard cardProps={card}
+                                                               attendEvent={this.attendEvent}
+                                />)}
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import './AgoraNavbar.css'
 import {Link} from 'react-router-dom';
 import Aux from '../hoc/Aux';
 import {GoHome} from "react-icons/go";
+import SearchService from "../services/SearchService";
 
 class AgoraNavbar extends React.Component {
     constructor(props) {
