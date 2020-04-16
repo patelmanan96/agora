@@ -34,7 +34,8 @@ class SingleEventModal extends Component {
                                 Attending
                             </button> : <button onClick={() => this.props.attendEvent(this.props.card)} className="btn btn-primary">
                                 Attend
-                            </button>) : <div></div>}
+                            </button>) :
+                            <button type="button" className="btn btn-primary" disabled>You are hosting this event</button>}
 
                     </div>
                 </div>
