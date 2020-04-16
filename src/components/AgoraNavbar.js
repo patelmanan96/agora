@@ -51,20 +51,20 @@ class AgoraNavbar extends React.Component {
 
                         <button onClick={this.fireCreateEvent}
                                 className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
-                        ${this.props.location.pathname === '/createEvent' ? 'current' : ''}`}
+                        ${this.props.location.pathname === '/createEvent' ? 'btn-info text-white' : ''}`}
                                 type="button">Create an Event
                         </button>
 
                         <button onClick={this.fireUpcoming}
                                 className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
-                        ${this.props.location.pathname === '/upcoming' ? 'current' : ''}`}
+                        ${this.props.location.pathname === '/upcoming' ? 'btn-info text-white' : ''}`}
                                 type="button">
                             My Upcoming Events
                         </button>
 
                         <button onClick={this.fireHostingEvent}
                                 className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
-                        ${this.props.location.pathname === '/hosting' ? 'current' : ''}`}
+                        ${this.props.location.pathname === '/hosting' ? 'btn-info text-white' : ''}`}
                                 type="button">
                             My Hosting Events
                         </button>
