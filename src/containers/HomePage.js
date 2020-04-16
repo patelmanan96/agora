@@ -5,6 +5,7 @@ import Modal from '../components/Modal';
 import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
 import SearchService from "../services/SearchService";
+import SearchCard from "../components/SearchCard";
 
 
 
@@ -24,9 +25,12 @@ class Homepage extends Component {
             attend: false,
             remove: false,
             host:false,
-            eventDetail: false
+            eventDetail: false,
+            cards: SearchService.getInstance().getRecommendedCards()
 
         }
+
+        this.searchService= SearchService.getInstance();
     }
 
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
@@ -39,6 +43,18 @@ class Homepage extends Component {
         this.setState({eventDetail: false})
     };
 
+    attendEvent = (card) => {
+        card.attending = true;
+        this.searchService.updateCard(card);
+        this.setState({cards: this.searchService.getRecommendedCards()})
+    };
+
+    cancelAttending = (card) => {
+        card.attending = false;
+        this.searchService.updateCard(card);
+        this.setState({cards: this.searchService.getRecommendedCards()})
+    };
+
     render () {
         return (
             <Aux>
@@ -49,7 +65,12 @@ class Homepage extends Component {
                             <CalendarEvents examEvent={this.eventDetailHandler}/>
                         </div>
                         <div className="col-sm-5">
-                            <RecommendEvents eventDetail={this.eventDetailHandler}/>
+                            <RecommendEvents
+                            cards={this.state.cards}
+                                eventDetail={this.eventDetailHandler}
+                                             attendEvent={this.attendEvent}
+                                             cancelAttending={this.cancelAttending}
+                            />
                         </div>
                     </div>
                     {this.state.eventDetail &&

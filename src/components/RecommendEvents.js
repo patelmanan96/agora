@@ -9,9 +9,12 @@ const recommendEvents = (props) => (
         <h3 style={{textAlign: "left", marginBottom: 85}}><i>Recommendations</i></h3>
         <div className="scrollbar">
             <div className="recmd bg-light">
-                {SearchService.getInstance().getRecommendedCards().map((card,idx) => {
-                    return <div className="m-5" key={`card-${idx}`}>
-                        <SearchCard cardProps={card} clickMore={props.eventDetail}/>
+                {props.cards.map((card) => {
+                    return <div className="m-5">
+                        <SearchCard cardProps={card} clickMore={props.eventDetail}
+                                    attendEvent={props.attendEvent}
+                                    cancelAttending={props.cancelAttending}
+                        />
                     </div>
                 })}
             </div>
