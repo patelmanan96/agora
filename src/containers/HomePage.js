@@ -12,7 +12,6 @@ import SearchCard from "../components/SearchCard";
 class Homepage extends Component {
     constructor(props){
         super(props);
-
         this.state = {
             eventInfo: {
                 eventTitle: "",
