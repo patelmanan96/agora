@@ -11,7 +11,8 @@ class SearchPage extends React.Component {
             query: this.props.match.params.query,
             cards: this.chunk(this.searchService.getCards(this.props.match.params.query)
                 .sort((card1, card2) => card1.title.localeCompare(card2.title)), 3),
-            sort: 'title'
+            sort: 'title',
+            results: this.searchService.getCards(this.props.match.params.query).length
         };
     }
 
@@ -32,6 +33,7 @@ class SearchPage extends React.Component {
     changeFilter = (filterType) => {
         if (filterType !== "ignore") {
             let queriedCards = this.searchService.getCards(filterType);
+            this.setState({results: queriedCards.length});
             this.changeSort(this.state.sort, queriedCards);
         } else {
             this.changeSort(this.state.sort);
@@ -63,7 +65,7 @@ class SearchPage extends React.Component {
                 <div className="row m-3 bg-light text-dark">
                     <div className="col-sm ">
                         <div className="mt-4">
-                            <h3> Search Results for '{this.state.query === '*' ? 'all' : this.state.query}' </h3>
+                            <h3><i>{this.state.results}</i> search results for '{this.state.query === '*' ? 'all' : this.state.query}' </h3>
                         </div>
                     </div>
                     <div className="col-sm">
