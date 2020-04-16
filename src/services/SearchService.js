@@ -4,6 +4,13 @@ import writing from '../images/writing.jpg';
 import smartphone from '../images/smartphone.jpg';
 import yoga from '../images/yoga.jpg';
 import mentalHealth from '../images/mentalHealth.jpg';
+import linkedinPhoto from '../images/linkedinPhoto.jpg';
+import pride from '../images/pride.jpg';
+import bootcamp from '../images/bootcamp.jpg';
+import NEU from '../images/NEU.jpg';
+import artSpeaker from '../images/artSpeaker.jpg';
+
+
 
 
 class SearchService {
@@ -35,7 +42,38 @@ class SearchService {
             this.#dates[3], "200 Ell Hall"),
         new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
             , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
-            this.#dates[3], "200 Ell Hall")
+            this.#dates[3], "200 Ell Hall"),
+        new EventCard(linkedinPhoto, 'Take Your LinkedIn Photo', ['career', 'networking'], 'Prepare for Your Job Hunting'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "209 Ryder Hall"),
+        new EventCard(pride, 'Husky Pride Parade', ['pride', 'self care', 'Society'], 'Celebrate Pride Month'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "209 Newbury Street"),
+        new EventCard(bootcamp, 'NU Free JS Coder Bootcamp', ['computer', 'science',  'networking', 'career'], 'Monthly Get-together for NU Free Code Campers'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "WVH 203"),
+        new EventCard(NEU, 'Campus Guide for new Huskies', ['campus guide'], 'Learn about Your Upcoming Campus Life'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "Curry Student Center"),
+        new EventCard(artSpeaker, 'Art and Design Gust Speaker', ['Art', 'networking'], 'Casual Chat with a Graphic Designer'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "300 Ryder Hall"),
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "200 Ell Hall"),
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "200 Ell Hall"),
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "200 Ell Hall"),
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "200 Ell Hall"),
+        new EventCard(mentalHealth, 'Mental Health Awareness Month', ['mental health', 'self care',  'health', 'Society'], 'Self care matters'
+            , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 
+            this.#dates[3], "200 Ell Hall"),
+        
         ];
 
     #hostingCards = [
