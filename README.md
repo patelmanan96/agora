@@ -9,3 +9,7 @@ history of attended events. For event organizers, whether they be administrators
 organizations, professors, or companies, the platform will provide them with a place to more
 easily reach the Northeastern University student body. The platform will help these event
 organizers keep track of the events they are hosting, since they may be hosting multiple events.
+
+## Live Heroku Link
+
+[Webpage](https://hci-agora-webapp.herokuapp.com)

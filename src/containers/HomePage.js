@@ -4,13 +4,15 @@ import RecommendEvents from '../components/RecommendEvents';
 import Modal from '../components/Modal';
 import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
+import SearchService from "../services/SearchService";
+import SearchCard from "../components/SearchCard";
 
 
 
 class Homepage extends Component {
     constructor(props){
         super(props);
-    
+
         this.state = {
             eventInfo: {
                 eventTitle: "",
@@ -19,25 +21,38 @@ class Homepage extends Component {
                 address:"",
                 organizer:""
             },
-            
+
             attend: false,
             remove: false,
             host:false,
-            eventDetail: false
+            eventDetail: false,
+            cards: SearchService.getInstance().getRecommendedCards()
 
         }
-    } 
+
+        this.searchService= SearchService.getInstance();
+    }
 
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
-        console.log(event)
-        console.log(event.event.title)
-        console.log(event.event.date)
-        // this.setState({eventDetail: true});
-    
+        // Card to be modaly displayed
+        let cardSelected = SearchService.getInstance().findCardById(event.event.id);
+        this.setState({eventDetail: true});
     };
 
     eventDetailCancleHandler = () => {
         this.setState({eventDetail: false})
+    };
+
+    attendEvent = (card) => {
+        card.attending = true;
+        this.searchService.updateCard(card);
+        this.setState({cards: this.searchService.getRecommendedCards()})
+    };
+
+    cancelAttending = (card) => {
+        card.attending = false;
+        this.searchService.updateCard(card);
+        this.setState({cards: this.searchService.getRecommendedCards()})
     };
 
     render () {
@@ -50,7 +65,12 @@ class Homepage extends Component {
                             <CalendarEvents examEvent={this.eventDetailHandler}/>
                         </div>
                         <div className="col-sm-5">
-                            <RecommendEvents eventDetail={this.eventDetailHandler}/>
+                            <RecommendEvents
+                            cards={this.state.cards}
+                                eventDetail={this.eventDetailHandler}
+                                             attendEvent={this.attendEvent}
+                                             cancelAttending={this.cancelAttending}
+                            />
                         </div>
                     </div>
                     {this.state.eventDetail &&
@@ -59,9 +79,9 @@ class Homepage extends Component {
                     </Modal>}
                 </div>
             </Aux>
-            
-                
-            
+
+
+
         );
     }
 }

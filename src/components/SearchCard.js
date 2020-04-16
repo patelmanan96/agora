@@ -8,6 +8,7 @@ class SearchCard extends React.Component {
     this.state = {
       // local state: whether modal is open
       SingleEventModalOpen: false,
+      props: this.props
     };
   }
 
@@ -26,6 +27,8 @@ class SearchCard extends React.Component {
           <SingleEventModal
             card={this.props.cardProps}
             closeModal={this.closeModal}
+            attendEvent={this.props.attendEvent}
+            cancelAttending={this.props.cancelAttending}
           />
         ) : null}
         <div className="card-header">
@@ -33,7 +36,7 @@ class SearchCard extends React.Component {
         </div>
         <div className="card-body">
           <img
-            src={this.props.cardProps.image}
+            src={this.props.cardProps.img}
             className="card-img-top img-fluid"
             alt="..."
           />
