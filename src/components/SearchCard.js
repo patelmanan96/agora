@@ -37,7 +37,7 @@ class SearchCard extends React.Component {
         <div className="card-body">
           <img
             src={this.props.cardProps.img}
-            className="card-img-top img-fluid"
+            className="card-img-top img-thumbnail"
             alt="..."
           />
           <h6 className="card-title mt-2">{this.props.cardProps.summary}</h6>

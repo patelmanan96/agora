@@ -6,6 +6,7 @@ import Aux from '../hoc/Aux';
 import EventSummary from '../components/EventSummary';
 import SearchService from "../services/SearchService";
 import SearchCard from "../components/SearchCard";
+import SingleEventModal from "../components/SingleEventModal";
 
 
 
@@ -20,7 +21,7 @@ class Homepage extends Component {
                 address:"",
                 organizer:""
             },
-
+            card: null,
             attend: false,
             remove: false,
             host:false,
@@ -35,7 +36,7 @@ class Homepage extends Component {
     eventDetailHandler = (event) => { //triggered when a calendar event clicked
         // Card to be modaly displayed
         let cardSelected = SearchService.getInstance().findCardById(event.event.id);
-        this.setState({eventDetail: true});
+        this.setState({eventDetail: true, card: cardSelected});
     };
 
     eventDetailCancleHandler = () => {
@@ -74,7 +75,11 @@ class Homepage extends Component {
                     </div>
                     {this.state.eventDetail &&
                     <Modal closeModal={this.eventDetailCancleHandler}>
-                       <EventSummary />
+                       <SingleEventModal card={this.state.card}
+                                         closeModal={this.eventDetailCancleHandler}
+                                         attendEvent={this.attendEvent}
+                                         cancelAttending={this.cancelAttending}
+                       />
                     </Modal>}
                 </div>
             </Aux>
