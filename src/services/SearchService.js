@@ -28,19 +28,19 @@ let eventCards = [new EventCard(1, "otherDefault", networking, 'Graduate Student
     new EventCard(5, "userDefault", mentalHealth, 'Mental Health Awareness Month', ['mental health', 'care', 'health'], 'Self care matters'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+4), "200 Ell Hall"),
-    new EventCard(6, "userDefault",linkedinPhoto, 'Take your linkedin photo', ['career', 'graduate', 'networking'], 'Prepare for your job hunting'
+    new EventCard(6, "otherDefault",linkedinPhoto, 'Take your linkedin photo', ['career', 'graduate', 'networking'], 'Prepare for your job hunting'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+5), "WVH"),
-    new EventCard(7, "userDefault",pride, 'Husky Pride Parade', ['pride', 'self care', 'society'], 'Celebrate the Pride Month'
+    new EventCard(7, "otherDefault",pride, 'Husky Pride Parade', ['pride', 'self care', 'society'], 'Celebrate the Pride Month'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+6), "300 Newbury Street"),
-    new EventCard(7, "userDefault",bootcamp, 'NU Free JS Coder Bootcamp', ['computer', 'science',  'networking', 'career'], 'Monthly Get-together for NU Free Code Campers'
+    new EventCard(7, "otherDefault",bootcamp, 'NU Free JS Coder Bootcamp', ['computer', 'science',  'networking', 'career'], 'Monthly Get-together for NU Free Code Campers'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+7), "209 Ryder Hall"),
-    new EventCard(8, "userDefault",NEU, 'Campus Guide for new Huskies', ['campus guide'], 'Learn about your upcoming campus life'
+    new EventCard(8, "otherDefault",NEU, 'Campus Guide for new Huskies', ['campus guide'], 'Learn about your upcoming campus life'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+8), "Curry Student Center"),
-    new EventCard(9, "userDefault",artSpeaker, 'Art and Design Guest Speaker', ['art', 'networking'], 'Casual Chat with Daniel, the Industrial Graphic Designer'
+    new EventCard(9, "otherDefault",artSpeaker, 'Art and Design Guest Speaker', ['art', 'networking'], 'Casual Chat with Daniel, the Industrial Graphic Designer'
         , 'Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.',
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+9), "300 Ryder Hall")
 ];
