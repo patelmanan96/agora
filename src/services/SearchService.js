@@ -119,10 +119,7 @@ class SearchService {
         return card;
     };
 
-    addNewCard = (card) => {
-        // let newCard = new EventCard(card.image, card.title, card.tags, card.summary, card.description);
-        // this.#eventCards = [...newCard]
-    };
+    addNewCard = (card) => eventCards.push(card);
 }
 
 export default SearchService;

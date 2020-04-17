@@ -69,7 +69,7 @@ class AgoraNavbar extends React.Component {
                                 className={`btn btn-outline-info mr-sm-4 my-2 my-sm-0
                         ${this.props.location.pathname === '/hosting' ? 'btn-info text-white' : ''}`}
                                 type="button">
-                            My Hosting Events
+                            Hosting Events
                         </button>
 
                         <input onChange={this.searchParamChange}
