@@ -80,10 +80,9 @@ class AgoraNavbar extends React.Component {
 
                         <button onClick={this.fireSearch}
                                 className="btn btn-outline-success my-2 my-sm-0"
-                                type="button">
+                                type="submit">
                             Search
                         </button>
-
                     </form>
                 </nav>
             </Aux>
